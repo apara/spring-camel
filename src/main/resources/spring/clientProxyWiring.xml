@@ -11,7 +11,7 @@
     <!--  Creates a proxy for the client
     -->
     <bean id="remoteServiceClient" class="org.apache.camel.spring.remoting.CamelProxyFactoryBean">
-        <property name="serviceUrl" value="direct://message-in"/>
+        <property name="serviceUrl" value="direct://message-out"/>
         <property name="serviceInterface" value="com.standardset.camel.RemoteService"/>
     </bean>
 
