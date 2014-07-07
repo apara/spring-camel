@@ -1,0 +1,22 @@
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} rules [%thread] %-5level %logger{0} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+<!-- additivity=false ensures analytics data only goes to the analytics log -->
+
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<!-- Set package specific logging levels -->
+	<logger name="com.standardset">
+		<level value="DEBUG" />
+	</logger>
+</configuration>
